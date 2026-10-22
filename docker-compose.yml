@@ -1,0 +1,8 @@
+services:
+  authsvc:
+    container_name: authsvc
+    # Сначала собрать образ по Dockerfile из текущей папки
+    build: ./
+    # порт на хосте : порт в контейнере (аналог -p 8080:8080 у docker run)
+    ports:
+      - "8080:8080"
